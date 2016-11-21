@@ -14,7 +14,9 @@
       <%= link_to "My blog", root_path, class: "nav-link navbar-brand mb-0" %>
     </li>
     <li class="nav-item float-xs-right">
+      <% if user_signed_in? %>
       <%= link_to current_user.email, user_path(current_user) %>
+      <% end %>
     </li>
     
   </ul>
